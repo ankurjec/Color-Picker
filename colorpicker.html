@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Color Picker
+	</title>
+</head>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<body class="bg-grey-lightest">
+	<div id="app" class="h-screen" v-bind:style="{backgroundColor:bgColor}">
+		{{bgColor}}
+		<input type="color" v-model="bgColor">
+		<button @click="button()">Reset Color</button>
+	
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				bgColor: null,
+				resetColor: null
+			},
+			methods: {
+				button() {
+					// alert('This Is Testing Button');
+					this.bgColor='#23b8ae'				}
+			}
+		})
+
+	</script>
+</body>
+
+</html>
